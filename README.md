@@ -16,3 +16,14 @@
 `Installing setuptools, pip............done.`
 
 В дальнейшем перед началом работы выполнить `$ . venv/bin/activate`, а для окончания работы `$ deactivate`.
+
+Теперь устанавливаем flask  
+`$ . venv/bin/activate`  
+`$ pip install Flask`
+
+И создаём следующую структуру папок:  
+`app/static` - картинки, js, css  
+`app/templates` - шаблоны страниц  
+`app/__init__.py` - скрипт инициализации приложения  
+`app/views.py` - простейшая функция представления  
+`run.py` - скрипт запуска
