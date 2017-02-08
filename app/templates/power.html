@@ -3,8 +3,11 @@
         <div>
             <h2>Включение питания компьютера</h2>
             <p>
-                <input type="checkbox" class="switcher" id="computer_power"
-                {% if is_power_on %}checked{% endif %} />
+                {% if is_power_on %}
+                <input type="checkbox" class="switcher" id="computer_power" checked />
+                {% else %}
+                <input type="checkbox" class="switcher" id="computer_power" />
+                {% endif %}
                 <label class="fa fa-power-off empty" for="computer_power"></label>
                 Питание компьютера от сети 220В
             </p>
