@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бэк на питоне</title>
+    <link rel="stylesheet" href="/py_back/static/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/py_back/static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="shortcut icon" href="/py_back/static/favicon.ico">
+</head>
+<body>
+
+<div class="page_header">
+    <h1 class="fl-l"><i class="fa fa-home"></i> Домашний сервер</h1>
+    <div class="fl-r login">
+        {% if user %}<strong>{{user}}</strong>&nbsp;{% endif %}
+        <i style="opacity: 0.6">
+            {% if user %}
+            <i class="fa fa-sign-out"></i> Выйти
+            {% else %}
+            <i class="fa fa-times-circle"></i> Вход не выполнен
+            {% endif %}
+        </i>
+    </div>
+</div>
+
+<div class="sidebar">
+    <ul id="sidebar_menu">
+        <li><a id="to_sec_monitoring" href="#"><i class="fa fa-bar-chart"></i> OkFILM мониторинг</a></li>
+        <li><a id="to_sec_power_on" href="#"><i class="fa fa-power-off"></i> Включение компа</a></li>
+        <li><a id="to_sec_login" href="#"><i class="fa fa-sign-in"></i> Вход</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

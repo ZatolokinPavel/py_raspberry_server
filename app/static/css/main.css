@@ -1,0 +1,48 @@
+
+/* Общие классы */
+* {box-sizing: border-box;}
+.box {width: 100%; position: relative;}
+.box:after {content: ""; display: block; clear: both}
+.center {text-align: center;}
+img {border: 0 none; height: auto; max-width: 100%; vertical-align: middle;}
+ul {list-style: outside none none; margin: 0; padding: 0;}
+
+/* Подгонка под старые браузеры*/
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block;}   /* Делаем HTML5 элементы блочными */
+
+html, body {width: 100%; margin: 0; padding: 0;}
+body{color: #555; background: #ddeedd; font-size: 14px;
+     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+.grid{margin: 0 0 -15px -15px; width: auto;}
+.grid > * {padding: 0 0 15px 15px;}
+.grid > .clear_grid{padding-bottom: 0;}
+
+.col12{float:left; width: 100%;}
+.col11{float:left; width: 91.66666667%;}
+.col10{float:left; width: 83.33333333%;}
+.col9 {float:left; width: 75%;}
+.col8 {float:left; width: 66.66666667%;}
+.col7 {float:left; width: 58.33333333%;}
+.col6 {float:left; width: 50%;}
+.col5 {float:left; width: 41.66666667%;}
+.col4 {float:left; width: 33.33333333%;}
+.col3 {float:left; width: 25%;}
+.col2 {float:left; width: 16.66666667%;}
+.col1 {float:left; width: 8.33333333%;}
+
+.fl-l{float: left;}
+.fl-r{float: right;}
+
+
+.page_header{background: #008500; position: fixed; height: 42px; width: 100%; left: 0; top: 0; z-index: 3; color: #fff}
+.page_header h1 {line-height: 42px; margin: 0 15px; font-size: 20px;}
+.page_header .login {line-height: 42px; margin: 0 15px;}
+
+.sidebar{position: fixed; left: 0; top: 0; bottom: 0; margin-top: 42px; width: 187px; padding: 15px;
+         overflow: auto; z-index: 1;}
+.sidebar a{color: inherit; text-decoration: none; padding: 3px; display: inline-block; width: 100%;
+           border-radius: 2px;}
+.sidebar a:hover{background: #aaeeaa}
+
+.container{margin: 42px 0 0 0; padding: 15px 0 15px 187px; width: 100%; position: relative;}

@@ -1,4 +1,5 @@
 #!venv/bin/python
+#coding: utf-8
 __author__ = 'Zatolokin Pavel'
 
 from app import app
