@@ -6,6 +6,7 @@
 .center {text-align: center;}
 img {border: 0 none; height: auto; max-width: 100%; vertical-align: middle;}
 ul {list-style: outside none none; margin: 0; padding: 0;}
+.fa {min-width: 1em;}   /* чтобы не дёргались тексты рядом с иконкапи Font Awesome после загрузки */
 
 /* Подгонка под старые браузеры*/
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block;}   /* Делаем HTML5 элементы блочными */
@@ -36,6 +37,7 @@ body{color: #555; background: #ddeedd; font-size: 14px;
 
 
 .page_header{background: #008500; position: fixed; height: 42px; width: 100%; left: 0; top: 0; z-index: 3; color: #fff}
+.page_header a {color: inherit; text-decoration: none;}
 .page_header h1 {line-height: 42px; margin: 0 15px; font-size: 20px;}
 .page_header .login {line-height: 42px; margin: 0 15px;}
 
@@ -46,3 +48,26 @@ body{color: #555; background: #ddeedd; font-size: 14px;
 .sidebar a:hover{background: #aaeeaa}
 
 .container{margin: 42px 0 0 0; padding: 15px 0 15px 187px; width: 100%; position: relative;}
+
+
+/* Красивые переключатели */
+.switcher {vertical-align: top; margin: 0 3px 0 0; width: 17px; height: 17px;}  /* Немного облагораживаем стандартный чекбокс для IE8 и более старых версий */
+.switcher + label {cursor: pointer; line-height: 26px;}                         /* Показываем, что label кликабелен */
+.switcher:disabled + label {opacity: 0.5; cursor: auto;}
+.switcher:not(checked) {display: none;}                                         /* Прячем оригинальный чекбокс */
+.switcher:not(checked) + label {position: relative; padding: 0 0 0 60px;}
+.switcher:not(checked) + label.empty {padding: 0 25px; margin-right: 10px; display: inline;}    /* Если текст в теге label не нужен */
+.switcher:not(checked) + label:after {                                                          /* Поле (корпус) переключателя */
+    position: absolute; width: 50px; height: 26px; top: -6px; left: 0; content: '';
+    background: #cdd1da; border-radius: 13px; display: block;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.2);
+}
+.switcher:not(checked) + label:not(.fa):before {content: '';}                                   /* Если на ползунке переключателя не будет иконки Font Awesome */
+.switcher:not(checked) + label:before {                                                         /* Ползунок переключателя */
+    position: absolute; width: 22px; height: 22px; top: -4px; left: 2px; z-index: 1;
+    background: #fff; border-radius: 11px; display: block; transition: left 0.2s ease-in;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); line-height: 22px; text-align: center;
+}
+.switcher:checked + label:after {background: #9FD468;}                          /* Меняем фон чекбокса, когда он включен. */
+.switcher:checked + label:before {left: 26px;}                                  /* Сдвигаем переключатель чекбокса, когда он включен. */
+

@@ -10,6 +10,13 @@ def index():
     return render_template("index.html", user=None)
 
 
+@app.route('/py_back/power')
+def power_page():
+    return render_template("power.html",
+                           user=None,
+                           is_power_on=False)
+
+
 # Раздача статики
 @app.route('/py_back/static/<path:path>')
 def send_static(path):

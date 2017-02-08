@@ -12,7 +12,11 @@
 <body>
 
 <div class="page_header">
-    <h1 class="fl-l"><i class="fa fa-home"></i> Домашний сервер</h1>
+    <h1 class="fl-l">
+        <a href="/py_back">
+            <i class="fa fa-home"></i> Домашний сервер
+        </a>
+    </h1>
     <div class="fl-r login">
         {% if user %}<strong>{{user}}</strong>&nbsp;{% endif %}
         <i style="opacity: 0.6">
@@ -28,7 +32,7 @@
 <div class="sidebar">
     <ul id="sidebar_menu">
         <li><a id="to_sec_monitoring" href="#"><i class="fa fa-bar-chart"></i> OkFILM мониторинг</a></li>
-        <li><a id="to_sec_power_on" href="#"><i class="fa fa-power-off"></i> Включение компа</a></li>
+        <li><a href="/py_back/power"><i class="fa fa-power-off"></i> Включение компа</a></li>
         <li><a id="to_sec_login" href="#"><i class="fa fa-sign-in"></i> Вход</a></li>
     </ul>
 </div>
