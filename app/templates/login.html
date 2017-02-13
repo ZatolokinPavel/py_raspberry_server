@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+        <div>
+            <h2>Авторизуйтесь</h2>
+            <form action="" method="post" name="login">
+                {{ form.hidden_tag() }}
+                <p>
+                    <label for="username">Логин:</label>
+                    {{form.username(size=20, placeholder='Имя пользователя')}}
+                    <br>
+                    {% for error in form.errors.username %}
+                    <i style="color: red">{{error}}</i>
+                    {% endfor %}
+                </p>
+                <p>
+                    <label for="password">Пароль:</label>
+                    {{form.password}}
+                    <br>
+                    {% for error in form.errors.password %}
+                    <i style="color: red">{{error}}</i>
+                    {% endfor %}
+                </p>
+                <p>{{form.remember}} <label for="remember">Запомнить меня</label></p>
+                <p><input type="submit" value="Вход"></p>
+            </form>
+        </div>
+{% endblock %}

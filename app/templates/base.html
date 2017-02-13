@@ -5,15 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бэк на питоне</title>
-    <link rel="stylesheet" href="/py_back/static/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/py_back/static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="shortcut icon" href="/py_back/static/favicon.ico">
+    <link rel="stylesheet" href="{{base_url}}/static/css/main.css" type="text/css">
+    <link rel="stylesheet" href="{{base_url}}/static/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="shortcut icon" href="{{base_url}}/static/favicon.ico">
 </head>
 <body>
 
 <div class="page_header">
     <h1 class="fl-l">
-        <a href="/py_back">
+        <a href="{{base_url}}">
             <i class="fa fa-home"></i> Домашний сервер
         </a>
     </h1>
@@ -32,8 +32,8 @@
 <div class="sidebar">
     <ul id="sidebar_menu">
         <li><a id="to_sec_monitoring" href="#"><i class="fa fa-bar-chart"></i> OkFILM мониторинг</a></li>
-        <li><a href="/py_back/power"><i class="fa fa-power-off"></i> Включение компа</a></li>
-        <li><a id="to_sec_login" href="#"><i class="fa fa-sign-in"></i> Вход</a></li>
+        <li><a href="{{base_url}}/power"><i class="fa fa-power-off"></i> Включение компа</a></li>
+        <li><a href="{{base_url}}/login"><i class="fa fa-sign-in"></i> Вход</a></li>
     </ul>
 </div>
 
@@ -42,7 +42,7 @@
     {% endblock %}
 </div>
 
-<script src="/py_back/static/js/libs/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="{{base_url}}/static/js/libs/jquery-3.1.1.min.js" type="text/javascript"></script>
 
 </body>
 </html>
