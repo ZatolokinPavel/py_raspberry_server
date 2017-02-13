@@ -28,6 +28,7 @@
 Теперь устанавливаем Flask  
 `$ . venv/bin/activate`  
 `$ pip install Flask`  
+`$ pip install flask-wtf` (расширение для работы с формами)  
 Если IntelliJ IDEA не увидела Flask - это её проблемы. Идём в настройки проекта Project Structure и выбираем в качестве Project SDK питон из виртуального окружения.
 
 Для начала создаём следующую базовую структуру папок:  
