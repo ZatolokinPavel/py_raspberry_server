@@ -29,6 +29,9 @@
 `$ . venv/bin/activate`  
 `$ pip install Flask`  
 `$ pip install flask-wtf` (расширение для работы с формами)  
+`$ pip install sqlalchemy` (расширение для работы с базами SQL)  
+`$ pip install flask-sqlalchemy` (обёртка для SQLAlchemy под Flask)  
+`$ pip install sqlalchemy-migrate` (автоматические миграции для базы данных)  
 Если IntelliJ IDEA не увидела Flask - это её проблемы. Идём в настройки проекта Project Structure и выбираем в качестве Project SDK питон из виртуального окружения.
 
 Для начала создаём следующую базовую структуру папок:  
